@@ -23,14 +23,14 @@
 
         suitecloud-cli = pkgs.buildNpmPackage rec {
           pname = "@oracle/suitecloud-cli";
-          version = "3.0.2";
+          version = "3.1.0";
 
           src = pkgs.fetchurl {
             url = "https://registry.npmjs.org/@oracle/suitecloud-cli/-/suitecloud-cli-${version}.tgz";
-            sha256 = "sha256-cBBpIqcz4mVAEWU0RhrVdehfPUW6s+i5aQ/pCvZKr5Q=";
+            sha256 = "sha256-mkcRPMK2f2d0R04x/s0YWB6dFSJAktWOfW2/8DokgKU=";
           };
 
-          npmDepsHash = "sha256-OHpzdQV8HpgEACDGr2vtmSzS36/kLxNwnVDH0FaIbq0=";
+          npmDepsHash = "sha256-w4QPjPdK3Ia1UcIFQpBWihr+nVuVYhk5qesuzJxZKfg=";
 
           makeCacheWritable = true;
           npmFlags = [ "--ignore-scripts" ];
@@ -62,12 +62,12 @@
         };
 
         # Fetch the SuiteCloud CLI JAR file
-        sdfFileName = "cli-2025.1.0.jar";
-        basePath = "https://system.netsuite.com/download/suitecloud-sdk/25.1";
+        sdfFileName = "cli-2025.2.0.jar";
+        basePath = "https://system.netsuite.com/download/suitecloud-sdk/25.2";
 
         suiteCloudCliJar = pkgs.fetchurl {
           url = "${basePath}/${sdfFileName}";
-          sha256 = "sha256-tOMCF1v3TvVSa5Hi+NLD8+c/jopXP6b/+GlPvMy86JM=";
+          sha256 = "sha256-JTPMmz7qqAUd0R0Im9r/aTCl7cCGOTVQTZG4tWLRwnM=";
         };
 
       in
